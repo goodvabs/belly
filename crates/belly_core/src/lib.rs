@@ -63,7 +63,7 @@ use relations::RelationsPlugin;
 
 impl Plugin for ElementsCorePlugin {
     fn build(&self, app: &mut App) {
-        app.add_plugin(FrameTimeDiagnosticsPlugin)
+        app
             .add_system(fix_text_height)
             // .init_resource::<input::Focused>()
             .insert_resource(Defaults::default())
